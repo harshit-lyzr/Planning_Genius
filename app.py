@@ -3,6 +3,7 @@ import streamlit as st
 from lyzr import QABot
 import shutil
 from PIL import Image
+from prompts.prompts import prompt
 
 
 st.set_page_config(
@@ -94,11 +95,10 @@ def get_all_files(directory):
 
     return file_paths
 
-
 def book_qabot(filepath):
     with st.spinner("Generating Embeddings...."):
         qa_bot = QABot.pdf_qa(
-            input_files=[file_path],
+            input_files=[filepath],system_prompt=prompt
         )
     return qa_bot
 
