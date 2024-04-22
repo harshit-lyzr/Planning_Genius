@@ -29,6 +29,15 @@ st.image(image, width=150)
 # App title and introduction
 st.title("Lyzr Planning Genius📖")
 st.markdown("### Welcome to the Lyzr Planning Genius!")
+st.sidebar.markdown(f"""Upload Your Documents regarding Destinations,Restaurants and Ask to plan
+
+How It's Work:
+1) Upload your PDF Document
+2) Enter What are you planning?
+3) Click on plan
+4) It will Generate Planning"""
+                    )
+
 
 def remove_existing_files(directory):
     for filename in os.listdir(directory):
@@ -47,6 +56,25 @@ os.makedirs(data_directory, exist_ok=True)
 remove_existing_files(data_directory)
 
 uploaded_file = st.sidebar.file_uploader("Choose PDF file", type=["pdf"])
+
+with st.sidebar.expander("ℹ️ - About this App"):
+    st.markdown(
+        """
+    This app harnesses the Power of RAG to Create your Vacation planning from uploaded PDF Document.This a Planning Genius App where user have to Upload PDF Document of Vacation venues,Restaurant and Ask to plan for trip for you.it will create trip for your vacation plans.
+    """
+    )
+    st.link_button("Lyzr", url="https://www.lyzr.ai/", use_container_width=True)
+    st.link_button(
+        "Book a Demo", url="https://www.lyzr.ai/book-demo/", use_container_width=True
+    )
+    st.link_button(
+        "Discord", url="https://discord.gg/nm7zSyEFA2", use_container_width=True
+    )
+    st.link_button(
+        "Slack",
+        url="https://join.slack.com/t/genaiforenterprise/shared_invite/zt-2a7fr38f7-_QDOY1W1WSlSiYNAEncLGw",
+        use_container_width=True,
+    )
 
 if uploaded_file is not None:
     # Save the uploaded PDF file to the data directory
