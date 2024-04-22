@@ -6,7 +6,7 @@ from PIL import Image
 
 
 st.set_page_config(
-    page_title="Lyzr Planning Genius",
+    page_title="Lyzr Travel Advisor",
     layout="centered",  # or "wide"
     initial_sidebar_state="auto",
     page_icon="lyzr-logo-cut.png",
@@ -27,15 +27,15 @@ image = Image.open("lyzr-logo.png")
 st.image(image, width=150)
 
 # App title and introduction
-st.title("Lyzr Planning Genius📖")
-st.markdown("### Welcome to the Lyzr Planning Genius!")
-st.sidebar.markdown(f"""Upload Your Documents and Ask to plan
+st.title("Lyzr Travel Advisor📖")
+st.markdown("### Welcome to the Lyzr Travel Advisor!")
+st.sidebar.markdown(f"""This app harnesses the Power of RAG to Create your Travel planning from uploaded PDF Document. This a Travel Advisor App where user have to Upload PDF Document and Ask to plan a trip for you.it will create plan for your Vacations.
 
 How It's Work:
 1) Upload your PDF Document
 2) Enter What are you planning?
 3) Click on plan
-4) It will Generate Planning"""
+4) It will Generate Your Travel Planning"""
                     )
 
 
@@ -57,12 +57,7 @@ remove_existing_files(data_directory)
 
 uploaded_file = st.sidebar.file_uploader("Choose PDF file", type=["pdf"])
 
-with st.sidebar.expander("ℹ️ - About this App"):
-    st.markdown(
-        """
-    This app harnesses the Power of RAG to Create your planning from uploaded PDF Document.This a Planning Genius App where user have to Upload PDF Document and Ask to plan for trip for you.it will create plan for your specific task
-    """
-    )
+with st.sidebar.expander("ℹ️ - Contact us"):
     st.link_button("Lyzr", url="https://www.lyzr.ai/", use_container_width=True)
     st.link_button(
         "Book a Demo", url="https://www.lyzr.ai/book-demo/", use_container_width=True
