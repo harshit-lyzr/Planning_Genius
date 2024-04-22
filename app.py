@@ -6,7 +6,7 @@ from PIL import Image
 
 
 st.set_page_config(
-    page_title="Lyzr Travel Advisor",
+    page_title="Lyzr Travel Planner",
     layout="centered",  # or "wide"
     initial_sidebar_state="auto",
     page_icon="lyzr-logo-cut.png",
@@ -27,9 +27,9 @@ image = Image.open("lyzr-logo.png")
 st.image(image, width=150)
 
 # App title and introduction
-st.title("Lyzr Travel Advisor📖")
-st.markdown("### Welcome to the Lyzr Travel Advisor!")
-st.sidebar.markdown(f"""This app harnesses the Power of RAG to Create your Travel planning from uploaded PDF Document. This a Travel Advisor App where user have to Upload PDF Document and Ask to plan a trip for you.it will create plan for your Vacations.
+st.title("Lyzr Travel Planner📖")
+st.markdown("### Welcome to the Lyzr Travel Planner!")
+st.sidebar.markdown(f"""This app harnesses the Power of RAG to Create your Travel planning from uploaded PDF Document. This a Travel Planner App where user have to Upload PDF Document and Ask to plan a trip for you.it will create plan for your Vacations.
 
 How It's Work:
 1) Upload your PDF Document
