@@ -29,7 +29,7 @@ st.image(image, width=150)
 # App title and introduction
 st.title("Lyzr Planning Genius📖")
 st.markdown("### Welcome to the Lyzr Planning Genius!")
-st.sidebar.markdown(f"""Upload Your Documents regarding Destinations,Restaurants and Ask to plan
+st.sidebar.markdown(f"""Upload Your Documents and Ask to plan
 
 How It's Work:
 1) Upload your PDF Document
@@ -60,7 +60,7 @@ uploaded_file = st.sidebar.file_uploader("Choose PDF file", type=["pdf"])
 with st.sidebar.expander("ℹ️ - About this App"):
     st.markdown(
         """
-    This app harnesses the Power of RAG to Create your Vacation planning from uploaded PDF Document.This a Planning Genius App where user have to Upload PDF Document of Vacation venues,Restaurant and Ask to plan for trip for you.it will create trip for your vacation plans.
+    This app harnesses the Power of RAG to Create your planning from uploaded PDF Document.This a Planning Genius App where user have to Upload PDF Document and Ask to plan for trip for you.it will create plan for your specific task
     """
     )
     st.link_button("Lyzr", url="https://www.lyzr.ai/", use_container_width=True)
